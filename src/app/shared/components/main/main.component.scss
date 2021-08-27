@@ -1,0 +1,29 @@
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+mat-sidenav-container {
+  height: calc(100% - 64px);
+
+  mat-sidenav {
+    width: 250px;
+
+    mat-nav-list {
+      a {
+        display: flex;
+        align-items: center;
+        color: #555;
+
+        mat-icon {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+  mat-sidenav-content {
+    padding: 16px;
+  }
+}

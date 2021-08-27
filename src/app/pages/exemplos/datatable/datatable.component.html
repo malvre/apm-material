@@ -1,0 +1,60 @@
+<h2>Data Table</h2>
+<p>Exemplo de tabela de dados</p>
+
+<div class="d-flex justify-content-between align-items-center">
+  <!-- deck de botões -->
+  <div class="deck">
+    <button mat-raised-button color="primary" (click)="showSelectedMovies()">
+      Exibir selecionados
+    </button>
+    <button mat-raised-button>Outro botão</button>
+  </div>
+
+  <!-- filtro -->
+  <mat-form-field appearance="fill" color="primary" style="width: 200px">
+    <mat-label>Filtro</mat-label>
+    <input matInput type="text" [(ngModel)]="searchTerm" autocomplete="off" />
+    <button
+      *ngIf="searchTerm"
+      matSuffix
+      mat-icon-button
+      aria-label="Limpar"
+      (click)="searchTerm = ''"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
+<!-- tabela de dados -->
+<table *ngIf="movies.length > 0" class="table table-hover mat-elevation-z1">
+  <thead>
+    <tr>
+      <th>
+        <mat-checkbox
+          (change)="updateCheck()"
+          [(ngModel)]="selectAll"
+        ></mat-checkbox>
+      </th>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Type</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies | search: searchTerm">
+      <td><mat-checkbox [(ngModel)]="movie.checked"></mat-checkbox></td>
+      <td>{{ movie.imdbID }}</td>
+      <td>{{ movie.Title }}</td>
+      <td>{{ movie.Type }}</td>
+      <td>{{ movie.Year }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- indicador de carga dos dados -->
+<mat-progress-bar
+  mode="indeterminate"
+  *ngIf="movies.length == 0"
+></mat-progress-bar>

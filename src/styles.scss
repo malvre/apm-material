@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.deck {
+  margin: 16px 0;
+
+  button {
+    margin: 0 8px 8px 0px;
+  }
+}
+
+.table {
+  width: 100%;
+
+  thead {
+    tr {
+      background-color: #fff;
+      height: 56px;
+      vertical-align: middle;
+
+      th {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.54);
+        font-weight: 500;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+
+        &:first-child {
+          padding-left: 16px;
+        }
+
+        &:last-child {
+          padding-right: 16px;
+        }
+      }
+    }
+  }
+
+  tbody {
+    background-color: #fff;
+
+    tr {
+      height: 48px;
+      vertical-align: middle;
+
+      td {
+        font-size: 14px;
+
+        &:first-child {
+          padding-left: 16px;
+        }
+
+        &:last-child {
+          padding-right: 16px;
+        }
+      }
+    }
+  }
+}

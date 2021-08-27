@@ -1,0 +1,15 @@
+<h2>Comunicação entre componentes</h2>
+<p>Exemplo de atualização de valores entre componentes</p>
+
+<app-header></app-header>
+
+<p class="mt-4" style="color: #666; width: 50%">
+  Os botões abaixo emitem eventos para o serviço de mensagens, e o componente de
+  toolbar está inscrito para escutar as mudanças de valores e atualizar o badge.
+</p>
+<div class="deck">
+  <button mat-raised-button (click)="limpar()">Limpar</button>
+  <button mat-raised-button color="primary" (click)="novaMensagem()">
+    Nova mensagem
+  </button>
+</div>

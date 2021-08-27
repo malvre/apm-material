@@ -1,0 +1,23 @@
+<h2>Autocomplete</h2>
+
+<mat-form-field style="width: 100%" appearance="fill">
+  <input
+    matInput
+    placeholder="Busca por filme ou seriado"
+    [matAutocomplete]="auto"
+    [formControl]="searchMoviesCtrl"
+  />
+  <mat-autocomplete
+    #auto="matAutocomplete"
+    (optionSelected)="onSelect($event)"
+    [displayWith]="displayProperty"
+  >
+    <mat-option *ngFor="let movie of filteredMovies" [value]="movie">
+      {{ movie.Title }} ({{ movie.Year }})
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+<br />
+
+<h3>ID: {{ idMovie }}</h3>
