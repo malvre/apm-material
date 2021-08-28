@@ -1,7 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { of } from 'rxjs';
 import { debounceTime, switchMap, tap } from 'rxjs/operators';
 import { MovieService } from 'src/app/shared/services/movie.service';
 
@@ -42,7 +40,6 @@ export class AutocompleteComponent implements OnInit {
   }
 
   onSelect(e: any) {
-    console.log(e.option.value);
     this.idMovie = e.option.value.imdbID;
   }
 }

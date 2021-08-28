@@ -15,18 +15,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ConfirmComponent } from './shared/components/confirm/confirm.component';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainComponent,
-    DashboardComponent,
-    ConfirmComponent,
-  ],
+  declarations: [AppComponent, MainComponent, DashboardComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -39,8 +31,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatDialogModule,
-    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

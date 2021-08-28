@@ -1,1 +1,151 @@
-<p>formulario works!</p>
+<h2>Formulário</h2>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- nome -->
+      <mat-form-field appearance="fill">
+        <mat-label>Nome completo</mat-label>
+        <input matInput formControlName="nome" />
+      </mat-form-field>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <!-- cpf -->
+          <mat-form-field appearance="fill">
+            <mat-label>CPF</mat-label>
+            <input matInput formControlName="cpf" />
+          </mat-form-field>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <!-- data de nascimento -->
+          <mat-form-field appearance="fill">
+            <mat-label>Data de nascimento</mat-label>
+            <input matInput formControlName="dataNascimento" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+          <!-- email -->
+          <mat-form-field appearance="fill">
+            <mat-label>E-mail</mat-label>
+            <input matInput formControlName="email" />
+          </mat-form-field>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+          <!-- telefone -->
+          <mat-form-field appearance="fill">
+            <mat-label>Telefone</mat-label>
+            <input matInput formControlName="telefone" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="mt-4"></div>
+
+      <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-3 col-xl-3">
+          <!-- cep -->
+          <mat-form-field appearance="fill">
+            <mat-label>CEP</mat-label>
+            <input matInput formControlName="cep" />
+          </mat-form-field>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
+          <!-- logradouro -->
+          <mat-form-field appearance="fill">
+            <mat-label>Logradouro</mat-label>
+            <input matInput formControlName="logradouro" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <!-- número -->
+          <mat-form-field appearance="fill">
+            <mat-label>Número</mat-label>
+            <input matInput formControlName="numero" />
+          </mat-form-field>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <!-- complemento -->
+          <mat-form-field appearance="fill">
+            <mat-label>Complemento</mat-label>
+            <input matInput formControlName="complemento" />
+          </mat-form-field>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <!-- bairro -->
+          <mat-form-field appearance="fill">
+            <mat-label>Bairro</mat-label>
+            <input matInput formControlName="bairro" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <!-- município -->
+          <mat-form-field appearance="fill">
+            <mat-label>Município</mat-label>
+            <input matInput formControlName="municipio" />
+          </mat-form-field>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <!-- uf -->
+          <mat-form-field appearance="fill">
+            <mat-label>UF</mat-label>
+            <input matInput formControlName="uf" />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="mt-4"></div>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Habilidades</mat-label>
+        <input matInput formControlName="habilidades" />
+      </mat-form-field>
+
+      <mat-checkbox formControlName="aceiteTermos"
+        >Aceito os termos de uso & privacidade</mat-checkbox
+      >
+
+      <div class="deck mt-5">
+        <button type="submit" mat-raised-button color="primary">Enviar</button>
+        <button mat-raised-button (click)="onReset()">Limpar</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+    <h3>To Do</h3>
+    <ul>
+      <li class="xtext-decoration-line-through">Máscara para o CPF</li>
+      <li class="xtext-decoration-line-through">Máscara para o CEP</li>
+      <li class="xtext-decoration-line-through">
+        Máscara para a data de nascimento
+      </li>
+      <li class="xtext-decoration-line-through">
+        Datepicker para data de nascimento
+      </li>
+      <li class="xtext-decoration-line-through">
+        CEP com preenchimento automático
+      </li>
+      <li class="xtext-decoration-line-through">Campo SELECT para UF</li>
+      <li class="xtext-decoration-line-through">Chips para habilidades</li>
+      <li class="xtext-decoration-line-through">Mensagens de validação</li>
+      <li class="xtext-decoration-line-through">
+        Bloqueio no submit em caso de inválido
+      </li>
+    </ul>
+  </div>
+</div>
