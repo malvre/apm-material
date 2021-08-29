@@ -28,12 +28,14 @@
               matInput
               [matDatepicker]="picker"
               formControlName="dataNascimento"
+              placeholder="dd/mm/aaaa"
+              [disabled]="true"
             />
             <mat-datepicker-toggle
               matSuffix
               [for]="picker"
             ></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <mat-datepicker #picker [disabled]="false"></mat-datepicker>
           </mat-form-field>
 
           <app-print-error
@@ -171,26 +173,5 @@
         <button mat-raised-button (click)="onReset()">Limpar</button>
       </div>
     </form>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-    <h3>To Do</h3>
-    <ul>
-      <li class="text-decoration-line-through">Máscara para o CPF</li>
-      <li class="text-decoration-line-through">Máscara para o CEP</li>
-      <li class="xtext-decoration-line-through">
-        Máscara para a data de nascimento
-      </li>
-      <li class="text-decoration-line-through">
-        Datepicker para data de nascimento
-      </li>
-      <li class="text-decoration-line-through">
-        CEP com preenchimento automático
-      </li>
-      <li class="text-decoration-line-through">Campo SELECT para UF</li>
-      <li class="text-decoration-line-through">Mensagens de validação</li>
-      <li class="text-decoration-line-through">
-        Bloqueio no submit em caso de inválido
-      </li>
-    </ul>
   </div>
 </div>
