@@ -16,6 +16,7 @@ import { MatListModule } from '@angular/material/list';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MatCardModule } from '@angular/material/card';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 @NgModule({
   declarations: [AppComponent, MainComponent, DashboardComponent],
@@ -32,7 +33,7 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     MatCardModule,
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

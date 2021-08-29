@@ -18,12 +18,16 @@ import { ConfirmComponent } from './components/confirm/confirm.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 import { ConfirmService } from './services/confirm.service';
-import { MatOptionModule } from '@angular/material/core';
-import { MovieService } from './services/movie.service';
+
+import { PrintErrorComponent } from './components/print-error/print-error.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
-  declarations: [ConfirmComponent, SearchPipe],
+  declarations: [ConfirmComponent, SearchPipe, PrintErrorComponent],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -43,6 +47,9 @@ import { MovieService } from './services/movie.service';
     MatDividerModule,
     MatDialogModule,
     MatFormFieldModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   exports: [
     CommonModule,
@@ -65,7 +72,11 @@ import { MovieService } from './services/movie.service';
     MatFormFieldModule,
     MatCheckboxModule,
     MatButtonModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    PrintErrorComponent,
   ],
-  providers: [ConfirmService],
+  providers: [ConfirmService, MatDatepickerModule],
 })
 export class SharedModule {}

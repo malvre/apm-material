@@ -5,6 +5,8 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { UFService } from 'src/app/shared/services/uf.service';
+import { ViacepService } from 'src/app/shared/services/viacep.service';
 
 @Component({
   selector: 'app-formulario',
@@ -13,8 +15,15 @@ import {
 })
 export class FormularioComponent implements OnInit {
   form: FormGroup;
+  estados: any[] = [];
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private ufService: UFService,
+    private viacep: ViacepService
+  ) {
+    this.estados = this.ufService.lista();
+
     this.form = this.fb.group({
       nome: ['', Validators.required],
       cpf: ['', Validators.required],
@@ -31,7 +40,6 @@ export class FormularioComponent implements OnInit {
       bairro: [''],
       municipio: ['', Validators.required],
       uf: ['', Validators.required],
-      habilidades: [''],
       aceiteTermos: [false, Validators.requiredTrue],
     });
   }
@@ -52,5 +60,20 @@ export class FormularioComponent implements OnInit {
 
   onReset(): void {
     this.form.reset();
+  }
+
+  onBlurCep(e: any) {
+    const cep = e.target.value.replace(/\D/g, '');
+    const validacep = /^[0-9]{8}$/;
+    if (validacep.test(cep)) {
+      this.viacep.getEndereco(cep).subscribe((res: any) => {
+        this.form.patchValue({
+          logradouro: res.logradouro,
+          bairro: res.bairro,
+          municipio: res.localidade,
+          uf: res.uf,
+        });
+      });
+    }
   }
 }
