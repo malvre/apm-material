@@ -10,6 +10,7 @@ import { HeaderComponent } from './event-emitter/header/header.component';
 
 import { FormularioComponent } from './formulario/formulario.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
     DatatableComponent,
     FormularioComponent,
   ],
-  imports: [SharedModule, ExemplosRoutingModule],
+  imports: [SharedModule, ExemplosRoutingModule, NgxMaskModule.forChild()],
 })
 export class ExemplosModule {}

@@ -15,7 +15,7 @@
           <!-- cpf -->
           <mat-form-field appearance="fill">
             <mat-label>CPF</mat-label>
-            <input matInput formControlName="cpf" />
+            <input matInput formControlName="cpf" mask="000.000.000-00" />
           </mat-form-field>
           <app-print-error [control]="f.cpf" label="CPF"></app-print-error>
         </div>
@@ -73,7 +73,13 @@
           <!-- cep -->
           <mat-form-field appearance="fill">
             <mat-label>CEP</mat-label>
-            <input matInput formControlName="cep" (blur)="onBlurCep($event)" />
+            <input
+              matInput
+              formControlName="cep"
+              (blur)="onBlurCep($event)"
+              mask="00000-000"
+              [dropSpecialCharacters]="true"
+            />
           </mat-form-field>
           <app-print-error [control]="f.cep" label="CEP"></app-print-error>
         </div>
@@ -169,8 +175,8 @@
   <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
     <h3>To Do</h3>
     <ul>
-      <li class="xtext-decoration-line-through">Máscara para o CPF</li>
-      <li class="xtext-decoration-line-through">Máscara para o CEP</li>
+      <li class="text-decoration-line-through">Máscara para o CPF</li>
+      <li class="text-decoration-line-through">Máscara para o CEP</li>
       <li class="xtext-decoration-line-through">
         Máscara para a data de nascimento
       </li>

@@ -32,7 +32,7 @@ export class FormularioComponent implements OnInit {
       telefone: ['', Validators.required],
       cep: [
         '',
-        [Validators.required, Validators.maxLength(9), Validators.minLength(9)],
+        [Validators.required, Validators.maxLength(8), Validators.minLength(8)],
       ],
       logradouro: ['', Validators.required],
       numero: ['', Validators.required],

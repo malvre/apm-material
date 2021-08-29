@@ -18,6 +18,13 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MatCardModule } from '@angular/material/card';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+  showMaskTyped: true,
+};
+
 @NgModule({
   declarations: [AppComponent, MainComponent, DashboardComponent],
   imports: [
@@ -32,6 +39,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     MatIconModule,
     MatListModule,
     MatCardModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
   bootstrap: [AppComponent],
