@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { MovieService } from 'src/app/shared/services/movie.service';
+import { FormModalComponent } from './form-modal/form-modal.component';
 
 @Component({
   selector: 'app-datatable',
@@ -10,13 +12,13 @@ import { MovieService } from 'src/app/shared/services/movie.service';
 })
 export class DatatableComponent implements OnInit {
   movies: any[] = [];
-  displayedColumns: string[] = ['imdbID', 'Title', 'Type', 'Year'];
   selectAll: boolean = false;
   searchTerm: string = '';
 
   constructor(
     private movieService: MovieService,
-    private snackbar: MatSnackBar
+    private snackbar: MatSnackBar,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -57,5 +59,19 @@ export class DatatableComponent implements OnInit {
         duration: 2000,
       });
     }
+  }
+
+  /***
+   * abre modal com componente e recebe dados de volta
+   */
+  edit(movie: any) {
+    const dialogRef = this.dialog.open(FormModalComponent, {
+      width: '500px',
+      data: movie,
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed', result);
+    });
   }
 }

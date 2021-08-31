@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Movie</h1>
+
+<div mat-dialog-content>
+  <div class="row">
+    <div class="col-6">
+      <p>
+        Movie<br /><strong>{{ data.Title }}</strong>
+      </p>
+      <p>
+        Year<br /><strong>{{ data.Year }}</strong>
+      </p>
+      <p>
+        Type<br /><strong>{{ data.Type }}</strong>
+      </p>
+    </div>
+    <div class="col-6">
+      <img [src]="data.Poster" class="img-fluid" />
+    </div>
+  </div>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onFechar()">Fechar</button>
+  <button mat-button [mat-dialog-close]="data.Title" cdkFocusInitial>OK</button>
+</div>

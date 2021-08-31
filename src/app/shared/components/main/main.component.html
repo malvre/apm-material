@@ -25,6 +25,7 @@
         mat-list-item
         (click)="closeDrawer()"
         [routerLink]="item.link"
+        routerLinkActive="active-list-item"
       >
         <mat-icon>{{ item.icon }}</mat-icon
         >{{ item.title }}
