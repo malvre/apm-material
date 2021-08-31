@@ -11,9 +11,11 @@ import { HeaderComponent } from './event-emitter/header/header.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NgxMaskModule } from 'ngx-mask';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
+    DashboardComponent,
     DialogsComponent,
     AutocompleteComponent,
     EventEmitterComponent,

@@ -15,7 +15,7 @@ export class MainComponent {
   menuData = [
     {
       title: 'Home',
-      link: '/',
+      link: '/exemplos',
       icon: 'home',
     },
     {

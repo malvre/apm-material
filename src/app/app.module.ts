@@ -6,17 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MainComponent } from './shared/components/main/main.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { MatCardModule } from '@angular/material/card';
-import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -24,6 +14,8 @@ import { registerLocaleData } from '@angular/common';
 registerLocaleData(ptBr);
 
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { MainComponent } from './shared/components/main/main.component';
+import { SharedModule } from './shared/shared.module';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -31,19 +23,14 @@ const maskConfig: Partial<IConfig> = {
 };
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, DashboardComponent],
+  declarations: [AppComponent, MainComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule,
+    SharedModule,
     NgxMaskModule.forRoot(),
   ],
   providers: [
@@ -54,10 +41,6 @@ const maskConfig: Partial<IConfig> = {
     {
       provide: DEFAULT_CURRENCY_CODE,
       useValue: 'BRL',
-    },
-    {
-      provide: MAT_DATE_LOCALE,
-      useValue: 'pt-BR',
     },
   ],
   bootstrap: [AppComponent],
