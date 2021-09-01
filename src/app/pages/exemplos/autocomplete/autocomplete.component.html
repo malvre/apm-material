@@ -12,6 +12,9 @@
     (optionSelected)="onSelect($event)"
     [displayWith]="displayProperty"
   >
+    <mat-option *ngIf="isLoading">
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-option>
     <mat-option *ngFor="let movie of filteredMovies" [value]="movie">
       {{ movie.Title }} ({{ movie.Year }})
     </mat-option>

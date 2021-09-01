@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { debounceTime, switchMap, tap } from 'rxjs/operators';
+import { debounceTime, finalize, switchMap, tap } from 'rxjs/operators';
 import { MovieService } from 'src/app/shared/services/movie.service';
 
 @Component({
@@ -12,17 +12,25 @@ export class AutocompleteComponent implements OnInit {
   searchMoviesCtrl = new FormControl();
   idMovie: string = '';
   filteredMovies: any;
+  isLoading: boolean = false;
 
   constructor(private movieService: MovieService) {}
 
   ngOnInit() {
     this.searchMoviesCtrl.valueChanges
       .pipe(
-        debounceTime(500),
+        debounceTime(400),
         tap(() => {
           this.filteredMovies = [];
+          this.isLoading = true;
         }),
-        switchMap((value) => this.movieService.findAll(value))
+        switchMap((value) =>
+          this.movieService.findAll(value).pipe(
+            finalize(() => {
+              this.isLoading = false;
+            })
+          )
+        )
       )
       .subscribe((data: any) => {
         if (data.Search == undefined) {
