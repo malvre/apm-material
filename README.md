@@ -6,6 +6,14 @@ Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-c
 
 Este projeto é uma aplicação modelo que implementa o Material Design e diversos exemplos de situações comuns em sistemas desktop web. Também foram aplicadas boa práticas em relação à organização do código e a escalabilidade da aplicação.
 
+### Instalação
+
+- Pré-requisitos: [NodeJS 12+](https://nodejs.org/en/) e [Angular CLI](https://angular.io/guide/setup-local#install-the-angular-cli)
+- git clone do projeto
+- cd para a pasta do projeto
+- npm ci
+- ng serve
+
 ### Setup do projeto
 
 Além do [Material Design](https://material.angular.io/), foi adicionado ao projeto o [Bootstrap 5](https://getbootstrap.com/), pois tem um suporte mais fácil para grid responsivo e mais alguns helpers interessantes.
