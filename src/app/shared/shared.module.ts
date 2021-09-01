@@ -27,6 +27,7 @@ import { ConfirmService } from './services/confirm.service';
 import { PrintErrorComponent } from './components/print-error/print-error.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [ConfirmComponent, SearchPipe, PrintErrorComponent],
@@ -54,6 +55,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatListModule,
     MatSidenavModule,
     MatMenuModule,
+    MatChipsModule,
   ],
   exports: [
     CommonModule,
@@ -82,6 +84,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     PrintErrorComponent,
     MatSidenavModule,
     MatMenuModule,
+    MatChipsModule,
   ],
   providers: [ConfirmService],
 })

@@ -1,6 +1,44 @@
 <h1>Título da página</h1>
 
 <div class="row">
+  <div class="col">
+    <mat-card class="my-2">
+      <mat-card-subtitle>Cores do tema customizado</mat-card-subtitle>
+      <mat-card-content>
+        <mat-chip-list>
+          <mat-chip color="primary" selected>Primary</mat-chip>
+          <mat-chip color="accent" selected>Accent</mat-chip>
+          <mat-chip color="warn" selected>Warn</mat-chip>
+          <mat-chip>Basic</mat-chip>
+        </mat-chip-list>
+
+        <section class="my-3">
+          <div>
+            <button mat-raised-button class="me-2">Basic</button>
+            <button mat-raised-button class="me-2" color="primary">
+              Primary
+            </button>
+            <button mat-raised-button class="me-2" color="accent">
+              Accent
+            </button>
+            <button mat-raised-button class="me-2" color="warn">Warn</button>
+            <button mat-raised-button class="me-2" disabled>Disabled</button>
+          </div>
+        </section>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col">
+    <mat-card class="my-2">
+      <mat-card-subtitle>Spinner</mat-card-subtitle>
+      <mat-card-content>
+        <mat-spinner></mat-spinner>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="row">
   <div
     class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"
     *ngFor="let i of [1, 2, 3]"
@@ -16,7 +54,7 @@
           totam eos!
         </p>
       </mat-card-content>
-      <mat-card-actions>
+      <mat-card-actions align="end">
         <button mat-button>LIKE</button>
         <button mat-button>SHARE</button>
       </mat-card-actions>

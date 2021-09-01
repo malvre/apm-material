@@ -1,0 +1,17 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+// Seleção das cores, segundo o Material Design
+// https://material.io/archive/guidelines/style/color.html#color-color-palette
+
+// PALETA DE CORES
+$my-primary: mat-palette($mat-indigo, 500);
+$my-accent: mat-palette($mat-pink, 500);
+$my-warn: mat-palette($mat-red, 500);
+
+// DEFINIÇÃO DO TEMA
+$my-theme: mat-light-theme($my-primary, $my-accent, $my-warn);
+
+// APLICAÇÃO DO TEMA
+@include angular-material-theme($my-theme);
