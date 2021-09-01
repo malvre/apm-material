@@ -57,6 +57,7 @@ export class DatatableComponent implements OnInit {
     } else {
       this.snackbar.open('Selecione pelo menos um filme', undefined, {
         duration: 2000,
+        panelClass: ['danger-snackbar'],
       });
     }
   }

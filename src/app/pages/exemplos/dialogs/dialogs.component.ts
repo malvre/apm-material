@@ -31,6 +31,7 @@ export class DialogsComponent implements OnInit {
             '',
             {
               duration: 5000,
+              panelClass: ['success-snackbar'],
             }
           );
           console.log('Mísseis enviados');
