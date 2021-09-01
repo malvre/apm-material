@@ -1,18 +1,29 @@
 <mat-toolbar color="primary">
   <button
+    *ngIf="authService.isAuthenticated && (isHandset$ | async)"
     type="button"
     aria-label="Toggle sidenav"
     mat-icon-button
     (click)="drawer.toggle()"
-    *ngIf="isHandset$ | async"
   >
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <span>APM Material</span>
+
+  <span style="flex: 1 1 auto"></span>
+
+  <button
+    *ngIf="authService.isAuthenticated"
+    mat-icon-button
+    (click)="onLogout()"
+  >
+    <mat-icon>logout</mat-icon>
+  </button>
 </mat-toolbar>
 
 <mat-sidenav-container>
   <mat-sidenav
+    *ngIf="authService.isAuthenticated"
     #drawer
     [fixedInViewport]="false"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"

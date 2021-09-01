@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
+import { AuthService } from 'src/app/pages/auth/auth.service';
 
 @Component({
   selector: 'app-main',
@@ -52,7 +53,10 @@ export class MainComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    public authService: AuthService
+  ) {}
 
   closeDrawer() {
     this.isHandset$.subscribe((isVisible) => {
@@ -60,5 +64,9 @@ export class MainComponent {
         this.drawer.close();
       }
     });
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 }
