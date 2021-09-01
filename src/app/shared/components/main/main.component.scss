@@ -1,3 +1,5 @@
+@import "src/assets/styles/my-theme.scss";
+
 mat-toolbar {
   position: sticky;
   top: 0;
@@ -29,5 +31,5 @@ mat-sidenav-container {
 }
 
 .active-list-item {
-  color: #3f51b5 !important;
+  color: mat-color($my-primary, 500) !important; //#3f51b5 !important;
 }
