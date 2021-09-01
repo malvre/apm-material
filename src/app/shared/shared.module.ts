@@ -20,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { ConfirmService } from './services/confirm.service';
 
@@ -52,6 +53,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatNativeDateModule,
     MatListModule,
     MatSidenavModule,
+    MatMenuModule,
   ],
   exports: [
     CommonModule,
@@ -79,6 +81,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatListModule,
     PrintErrorComponent,
     MatSidenavModule,
+    MatMenuModule,
   ],
   providers: [ConfirmService],
 })
