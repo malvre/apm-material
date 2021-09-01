@@ -8,7 +8,7 @@ Este projeto é uma aplicação modelo que implementa o Material Design e divers
 
 ### Setup do projeto
 
-Além do [Material Design](https://material.angular.io/), foi adicionado ao projeto o [Bootstrap 5](https://getbootstrap.com/), pois tem um suporte mais fácil para grid responsivo e mais algumas facilidades.
+Além do [Material Design](https://material.angular.io/), foi adicionado ao projeto o [Bootstrap 5](https://getbootstrap.com/), pois tem um suporte mais fácil para grid responsivo e mais alguns helpers interessantes.
 
 ## Feature Module & LazyLoading
 
