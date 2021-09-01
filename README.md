@@ -1,27 +1,31 @@
-# ApmMaterial
+# APM Material Design
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 12.2.1.
 
-## Development server
+## Aplicação Modelo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Este projeto é uma aplicação modelo que implementa o Material Design e diversos exemplos de situações comuns em sistemas desktop web. Também foram aplicadas boa práticas em relação à organização do código e a escalabilidade da aplicação.
 
-## Code scaffolding
+### Setup do projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Além do [Material Design](https://material.angular.io/), foi adicionado ao projeto o [Bootstrap 5](https://getbootstrap.com/), pois tem um suporte mais fácil para grid responsivo e mais algumas facilidades.
 
-## Build
+## Feature Module & LazyLoading
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Temos um módulo **shared** que compartilha recursos para os outros módulos, e temos os módulos **auth** e **exemplos** implementando o _LazyLoading_.
 
-## Running unit tests
+O módulo **auth** apresenta um fluxo de login, com exemplos de persistência de token, guardas de rota e serviço de autenticação.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O módulo **exemplos** apresenta páginas com exemplos de interações comuns em sistemas, como formulários, listas de dados, diálogos, dashboards, etc.
 
-## Running end-to-end tests
+## Custom Theme
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Como este projeto suporta o tema do Material Design, apresentamos também um exemplo de como customizar a paleta de cores a partir do [guia de cores do Material Design](https://material.io/archive/guidelines/style/color.html#color-color-palette).
 
-## Further help
+## Formulários reativos
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Na página exemplo de formulário, mostramos como controlar os dados no formulário e como exibir as mensagens de validação a partir de um componente que resolve automaticamente a validação e a mensagem a ser exibida.
+
+## Diálogo de confirmação
+
+Criamos um serviço para facilitar a criação de diálogos de confirmação, já que é utilizado com frequência em sistemas.
