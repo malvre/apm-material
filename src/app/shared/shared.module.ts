@@ -28,6 +28,7 @@ import { PrintErrorComponent } from './components/print-error/print-error.compon
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [ConfirmComponent, SearchPipe, PrintErrorComponent],
@@ -56,6 +57,7 @@ import { MatChipsModule } from '@angular/material/chips';
     MatSidenavModule,
     MatMenuModule,
     MatChipsModule,
+    MatSliderModule,
   ],
   exports: [
     CommonModule,
@@ -85,6 +87,7 @@ import { MatChipsModule } from '@angular/material/chips';
     MatSidenavModule,
     MatMenuModule,
     MatChipsModule,
+    MatSliderModule,
   ],
   providers: [ConfirmService],
 })

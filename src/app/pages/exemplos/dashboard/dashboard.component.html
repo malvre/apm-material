@@ -5,14 +5,7 @@
     <mat-card class="my-2">
       <mat-card-subtitle>Cores do tema customizado</mat-card-subtitle>
       <mat-card-content>
-        <mat-chip-list>
-          <mat-chip color="primary" selected>Primary</mat-chip>
-          <mat-chip color="accent" selected>Accent</mat-chip>
-          <mat-chip color="warn" selected>Warn</mat-chip>
-          <mat-chip>Basic</mat-chip>
-        </mat-chip-list>
-
-        <section class="my-3">
+        <section class="mt-4">
           <div>
             <button mat-raised-button class="me-2">Basic</button>
             <button mat-raised-button class="me-2" color="primary">
@@ -24,6 +17,23 @@
             <button mat-raised-button class="me-2" color="warn">Warn</button>
             <button mat-raised-button class="me-2" disabled>Disabled</button>
           </div>
+        </section>
+
+        <section class="mt-4">
+          <mat-slider
+            min="0"
+            max="10"
+            step="1"
+            value="4"
+            [thumbLabel]="true"
+            class="d-flex"
+          ></mat-slider>
+        </section>
+
+        <section class="mt-4">
+          <mat-checkbox [checked]="true" labelPosition="after">
+            I'm a checkbox
+          </mat-checkbox>
         </section>
       </mat-card-content>
     </mat-card>
