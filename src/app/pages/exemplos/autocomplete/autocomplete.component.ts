@@ -35,6 +35,7 @@ export class AutocompleteComponent implements OnInit {
       .subscribe((data: any) => {
         if (data.Search == undefined) {
           this.filteredMovies = [];
+          this.idMovie = '';
         } else {
           this.filteredMovies = data.Search;
         }
