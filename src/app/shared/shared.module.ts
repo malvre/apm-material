@@ -30,6 +30,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSliderModule } from '@angular/material/slider';
 import { LoadingComponent } from './components/loading/loading.component';
+import { HeaderComponent } from '../pages/exemplos/event-emitter/header/header.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     SearchPipe,
     PrintErrorComponent,
     LoadingComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -95,6 +97,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     MatChipsModule,
     MatSliderModule,
     LoadingComponent,
+    HeaderComponent,
   ],
   providers: [ConfirmService],
 })

@@ -6,7 +6,6 @@ import { DialogsComponent } from './dialogs/dialogs.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { DatatableComponent } from './datatable/datatable.component';
 import { EventEmitterComponent } from './event-emitter/event-emitter.component';
-import { HeaderComponent } from './event-emitter/header/header.component';
 
 import { FormularioComponent } from './formulario/formulario.component';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -20,7 +19,6 @@ import { FormModalComponent } from './datatable/form-modal/form-modal.component'
     DialogsComponent,
     AutocompleteComponent,
     EventEmitterComponent,
-    HeaderComponent,
     DatatableComponent,
     FormularioComponent,
     FormModalComponent,
