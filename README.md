@@ -37,3 +37,7 @@ Na página exemplo de formulário, mostramos como controlar os dados no formulá
 ## Diálogo de confirmação
 
 Criamos um serviço para facilitar a criação de diálogos de confirmação, já que é utilizado com frequência em sistemas.
+
+## Feedback de atividade
+
+Um serviço para facilitar a exibição de um feedback de atividade que bloqueia a tela até o término da atividade.
