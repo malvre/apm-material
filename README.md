@@ -2,6 +2,10 @@
 
 Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 12.2.1.
 
+## Importante
+
+> Utilize este projeto como uma aplicação rodando localmente em seu computador, copiando ou se inspirando nos exemplos apresentados. NÃO utilize com um template, pois mantendo o projeto rodando como o original, você pode pegar as atualizações mais recentes.
+
 ## Aplicação Modelo
 
 Este projeto é uma aplicação modelo que implementa o Material Design e diversos exemplos de situações comuns em sistemas desktop web. Também foram aplicadas boa práticas em relação à organização do código e a escalabilidade da aplicação.
