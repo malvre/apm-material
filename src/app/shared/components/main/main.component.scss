@@ -6,6 +6,12 @@ mat-toolbar {
   z-index: 3;
 }
 
+@media (max-width: 599px) {
+  mat-sidenav-container {
+    height: calc(100% - 56px) !important;
+  }
+}
+
 mat-sidenav-container {
   height: calc(100% - 64px);
 
@@ -17,6 +23,7 @@ mat-sidenav-container {
         display: flex;
         align-items: center;
         color: #555;
+        font-size: 14px;
 
         mat-icon {
           margin-right: 6px;
