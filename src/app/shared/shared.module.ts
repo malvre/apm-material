@@ -29,9 +29,15 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSliderModule } from '@angular/material/slider';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
-  declarations: [ConfirmComponent, SearchPipe, PrintErrorComponent],
+  declarations: [
+    ConfirmComponent,
+    SearchPipe,
+    PrintErrorComponent,
+    LoadingComponent,
+  ],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -88,6 +94,7 @@ import { MatSliderModule } from '@angular/material/slider';
     MatMenuModule,
     MatChipsModule,
     MatSliderModule,
+    LoadingComponent,
   ],
   providers: [ConfirmService],
 })

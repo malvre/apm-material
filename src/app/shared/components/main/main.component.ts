@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
 import { AuthService } from 'src/app/pages/auth/auth.service';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'app-main',
@@ -12,6 +13,7 @@ import { AuthService } from 'src/app/pages/auth/auth.service';
 })
 export class MainComponent {
   @ViewChild('drawer', { static: false }) drawer!: MatSidenav;
+  isLoading: boolean = false;
 
   menuData = [
     {
@@ -55,8 +57,13 @@ export class MainComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    public authService: AuthService
-  ) {}
+    public authService: AuthService,
+    public loadingService: LoadingService
+  ) {
+    this.loadingService.loading.subscribe(() => {
+      this.isLoading = this.loadingService.isLoading;
+    });
+  }
 
   closeDrawer() {
     this.isHandset$.subscribe((isVisible) => {

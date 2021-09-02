@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { LoadingService } from 'src/app/shared/services/loading.service';
 
 import { UFService } from 'src/app/shared/services/uf.service';
 import { ViacepService } from 'src/app/shared/services/viacep.service';
@@ -21,7 +22,8 @@ export class FormularioComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private ufService: UFService,
-    private viacep: ViacepService
+    private viacep: ViacepService,
+    private loadingService: LoadingService
   ) {
     this.estados = this.ufService.lista();
 
@@ -55,8 +57,12 @@ export class FormularioComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
+    this.loadingService.show();
 
-    console.log(JSON.stringify(this.form.value, null, 2));
+    setTimeout(() => {
+      console.log(JSON.stringify(this.form.value, null, 2));
+      this.loadingService.hide();
+    }, 2000);
   }
 
   onReset(): void {
