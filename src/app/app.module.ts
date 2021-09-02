@@ -14,8 +14,8 @@ import { registerLocaleData } from '@angular/common';
 registerLocaleData(ptBr);
 
 import { NgxMaskModule, IConfig } from 'ngx-mask';
-import { MainComponent } from './shared/components/main/main.component';
 import { SharedModule } from './shared/shared.module';
+import { MainComponent } from './shared/components/main/main.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
