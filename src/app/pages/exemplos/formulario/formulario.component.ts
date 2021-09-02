@@ -16,7 +16,7 @@ import { ViacepService } from 'src/app/shared/services/viacep.service';
   styleUrls: ['./formulario.component.scss'],
 })
 export class FormularioComponent implements OnInit {
-  form: FormGroup;
+  form!: FormGroup;
   estados: any[] = [];
 
   constructor(
@@ -26,7 +26,10 @@ export class FormularioComponent implements OnInit {
     private loadingService: LoadingService
   ) {
     this.estados = this.ufService.lista();
+    this.initForm();
+  }
 
+  initForm() {
     this.form = this.fb.group({
       nome: ['', Validators.required],
       cpf: ['', Validators.required],
