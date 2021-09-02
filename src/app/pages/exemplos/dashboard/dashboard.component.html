@@ -1,54 +1,36 @@
 <h1>Título da página</h1>
 
-<div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-    <mat-card class="my-2">
-      <mat-card-subtitle>Cores do tema customizado</mat-card-subtitle>
-      <mat-card-content>
-        <section class="mt-4">
-          <div>
-            <button mat-raised-button class="me-2">Basic</button>
-            <button mat-raised-button class="me-2" color="primary">
-              Primary
-            </button>
-            <button mat-raised-button class="me-2" color="accent">
-              Accent
-            </button>
-            <button mat-raised-button class="me-2" color="warn">Warn</button>
-            <button mat-raised-button class="me-2" disabled>Disabled</button>
-          </div>
-        </section>
+<mat-card class="my-2">
+  <mat-card-subtitle>Cores do tema customizado</mat-card-subtitle>
+  <mat-card-content>
+    <section class="mt-4">
+      <div>
+        <button mat-raised-button class="me-2">Basic</button>
+        <button mat-raised-button class="me-2" color="primary">Primary</button>
+        <button mat-raised-button class="me-2" color="accent">Accent</button>
+        <button mat-raised-button class="me-2" color="warn">Warn</button>
+        <button mat-raised-button class="me-2" disabled>Disabled</button>
+      </div>
+    </section>
 
-        <section class="mt-4">
-          <mat-slider
-            min="0"
-            max="10"
-            step="1"
-            value="4"
-            [thumbLabel]="true"
-            class="d-flex"
-          ></mat-slider>
-        </section>
+    <section class="mt-4">
+      <mat-slider
+        min="0"
+        max="10"
+        step="1"
+        value="4"
+        [thumbLabel]="true"
+        class="d-flex"
+      ></mat-slider>
+    </section>
 
-        <section class="mt-4">
-          <mat-checkbox [checked]="true" labelPosition="after">
-            I'm a checkbox
-          </mat-checkbox>
-        </section>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-    <mat-card class="my-2">
-      <mat-card-subtitle>Spinner</mat-card-subtitle>
-      <mat-card-content>
-        <div class="d-flex justify-content-center align-items-center">
-          <mat-spinner></mat-spinner>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-</div>
+    <section class="mt-4">
+      <mat-checkbox [checked]="true" labelPosition="after">
+        I'm a checkbox
+      </mat-checkbox>
+    </section>
+  </mat-card-content>
+</mat-card>
 
 <div class="row">
   <div
