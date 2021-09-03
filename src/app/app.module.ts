@@ -1,26 +1,26 @@
-import { NgModule, LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { NgModule, LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { HttpClientModule } from '@angular/common/http'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
-import { LayoutModule } from '@angular/cdk/layout';
+import { LayoutModule } from '@angular/cdk/layout'
 
-import ptBr from '@angular/common/locales/pt';
-import { registerLocaleData } from '@angular/common';
+import ptBr from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common'
 
-registerLocaleData(ptBr);
+registerLocaleData(ptBr)
 
-import { NgxMaskModule, IConfig } from 'ngx-mask';
-import { SharedModule } from './shared/shared.module';
-import { MainComponent } from './shared/components/main/main.component';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { SharedModule } from './shared/shared.module'
+import { MainComponent } from './shared/components/main/main.component'
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
   showMaskTyped: true,
-};
+}
 
 @NgModule({
   declarations: [AppComponent, MainComponent],
@@ -45,4 +45,4 @@ const maskConfig: Partial<IConfig> = {
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

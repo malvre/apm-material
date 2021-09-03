@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 import {
   AbstractControl,
   FormBuilder,
   FormGroup,
   Validators,
-} from '@angular/forms';
-import { LoadingService } from 'src/app/shared/services/loading.service';
+} from '@angular/forms'
+import { LoadingService } from 'src/app/shared/services/loading.service'
 
-import { UFService } from 'src/app/shared/services/uf.service';
-import { ViacepService } from 'src/app/shared/services/viacep.service';
+import { UFService } from 'src/app/shared/services/uf.service'
+import { ViacepService } from 'src/app/shared/services/viacep.service'
 
 @Component({
   selector: 'app-formulario',
@@ -16,7 +16,7 @@ import { ViacepService } from 'src/app/shared/services/viacep.service';
   styleUrls: ['./formulario.component.scss'],
 })
 export class FormularioComponent implements OnInit {
-  form!: FormGroup;
+  form!: FormGroup
   estados: any[] = [];
 
   constructor(
@@ -25,8 +25,8 @@ export class FormularioComponent implements OnInit {
     private viacep: ViacepService,
     private loadingService: LoadingService
   ) {
-    this.estados = this.ufService.lista();
-    this.initForm();
+    this.estados = this.ufService.lista()
+    this.initForm()
   }
 
   initForm() {
@@ -47,34 +47,34 @@ export class FormularioComponent implements OnInit {
       municipio: ['', Validators.required],
       uf: ['', Validators.required],
       aceiteTermos: [false, Validators.requiredTrue],
-    });
+    })
   }
 
   get f(): { [key: string]: AbstractControl } {
-    return this.form.controls;
+    return this.form.controls
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onSubmit(): void {
     if (this.form.invalid) {
-      return;
+      return
     }
-    this.loadingService.show();
+    this.loadingService.show()
 
     setTimeout(() => {
-      console.log(JSON.stringify(this.form.value, null, 2));
-      this.loadingService.hide();
-    }, 2000);
+      console.log(JSON.stringify(this.form.value, null, 2))
+      this.loadingService.hide()
+    }, 2000)
   }
 
   onReset(): void {
-    this.form.reset();
+    this.form.reset()
   }
 
   onBlurCep(e: any) {
-    const cep = e.target.value.replace(/\D/g, '');
-    const validacep = /^[0-9]{8}$/;
+    const cep = e.target.value.replace(/\D/g, '')
+    const validacep = /^[0-9]{8}$/
     if (validacep.test(cep)) {
       this.viacep.getEndereco(cep).subscribe((res: any) => {
         this.form.patchValue({
@@ -82,8 +82,8 @@ export class FormularioComponent implements OnInit {
           bairro: res.bairro,
           municipio: res.localidade,
           uf: res.uf,
-        });
-      });
+        })
+      })
     }
   }
 }

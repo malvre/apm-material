@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MessageService } from 'src/app/shared/services/message.service';
+import { Component, OnInit } from '@angular/core'
+import { MessageService } from 'src/app/shared/services/message.service'
 
 @Component({
   selector: 'app-event-emitter',
@@ -7,15 +7,15 @@ import { MessageService } from 'src/app/shared/services/message.service';
   styleUrls: ['./event-emitter.component.scss'],
 })
 export class EventEmitterComponent implements OnInit {
-  constructor(private messageService: MessageService) {}
+  constructor(private messageService: MessageService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   limpar() {
-    this.messageService.limpar();
+    this.messageService.limpar()
   }
 
   novaMensagem() {
-    this.messageService.novaMensagem();
+    this.messageService.novaMensagem()
   }
 }

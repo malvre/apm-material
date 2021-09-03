@@ -1,10 +1,10 @@
-import { Component, ViewChild } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
-import { MatSidenav } from '@angular/material/sidenav';
-import { AuthService } from 'src/app/pages/auth/auth.service';
-import { LoadingService } from '../../services/loading.service';
+import { Component, ViewChild } from '@angular/core'
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
+import { Observable } from 'rxjs'
+import { map, shareReplay } from 'rxjs/operators'
+import { MatSidenav } from '@angular/material/sidenav'
+import { AuthService } from 'src/app/pages/auth/auth.service'
+import { LoadingService } from '../../services/loading.service'
 
 @Component({
   selector: 'app-main',
@@ -12,7 +12,7 @@ import { LoadingService } from '../../services/loading.service';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent {
-  @ViewChild('drawer', { static: false }) drawer!: MatSidenav;
+  @ViewChild('drawer', { static: false }) drawer!: MatSidenav
   isLoading: boolean = false;
 
   menuData = [
@@ -61,19 +61,19 @@ export class MainComponent {
     public loadingService: LoadingService
   ) {
     this.loadingService.loading.subscribe(() => {
-      this.isLoading = this.loadingService.isLoading;
-    });
+      this.isLoading = this.loadingService.isLoading
+    })
   }
 
   closeDrawer() {
     this.isHandset$.subscribe((isVisible) => {
       if (isVisible) {
-        this.drawer.close();
+        this.drawer.close()
       }
-    });
+    })
   }
 
   onLogout() {
-    this.authService.logout();
+    this.authService.logout()
   }
 }

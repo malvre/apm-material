@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { Component, OnInit } from '@angular/core'
+import { MatDialog } from '@angular/material/dialog'
+import { MatSnackBar } from '@angular/material/snack-bar'
 
-import { MovieService } from 'src/app/shared/services/movie.service';
-import { FormModalComponent } from './form-modal/form-modal.component';
+import { MovieService } from 'src/app/shared/services/movie.service'
+import { FormModalComponent } from './form-modal/form-modal.component'
 
 @Component({
   selector: 'app-datatable',
@@ -19,16 +19,16 @@ export class DatatableComponent implements OnInit {
     private movieService: MovieService,
     private snackbar: MatSnackBar,
     public dialog: MatDialog
-  ) {}
+  ) { }
 
   ngOnInit(): void {
-    this.loadData();
+    this.loadData()
   }
 
   loadData() {
     this.movieService.findAll('lost').subscribe((result) => {
-      this.movies = result.Search;
-    });
+      this.movies = result.Search
+    })
   }
 
   /***
@@ -36,9 +36,9 @@ export class DatatableComponent implements OnInit {
    */
   updateCheck() {
     if (this.selectAll === true) {
-      this.movies.map((movie) => (movie.checked = true));
+      this.movies.map((movie) => (movie.checked = true))
     } else {
-      this.movies.map((movie) => (movie.checked = false));
+      this.movies.map((movie) => (movie.checked = false))
     }
   }
 
@@ -49,16 +49,16 @@ export class DatatableComponent implements OnInit {
     // pega os IDs dos filmes selecionados
     const selectedMovies = this.movies
       .filter((movie) => movie.checked === true)
-      .map((movie) => movie.imdbID);
+      .map((movie) => movie.imdbID)
 
     // exibe os filmes selecionados
     if (selectedMovies.length > 0) {
-      this.snackbar.open(selectedMovies.join(', '), 'OK');
+      this.snackbar.open(selectedMovies.join(', '), 'OK')
     } else {
       this.snackbar.open('Selecione pelo menos um filme', undefined, {
         duration: 2000,
         panelClass: ['danger-snackbar'],
-      });
+      })
     }
   }
 
@@ -69,10 +69,10 @@ export class DatatableComponent implements OnInit {
     const dialogRef = this.dialog.open(FormModalComponent, {
       width: '500px',
       data: movie,
-    });
+    })
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed', result);
-    });
+      console.log('The dialog was closed', result)
+    })
   }
 }

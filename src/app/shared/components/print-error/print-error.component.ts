@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { AbstractControl } from '@angular/forms';
-import { FormValidations } from '../../form-validations';
+import { Component, Input, OnInit } from '@angular/core'
+import { AbstractControl } from '@angular/forms'
+import { FormValidations } from '../../form-validations'
 
 @Component({
   selector: 'app-print-error',
@@ -8,12 +8,12 @@ import { FormValidations } from '../../form-validations';
   styleUrls: ['./print-error.component.scss'],
 })
 export class PrintErrorComponent implements OnInit {
-  @Input() control!: AbstractControl;
-  @Input() label!: string;
+  @Input() control!: AbstractControl
+  @Input() label!: string
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   get errorMessage() {
     for (const propertyName in this.control.errors) {
@@ -25,10 +25,10 @@ export class PrintErrorComponent implements OnInit {
           this.label,
           propertyName,
           this.control.errors[propertyName]
-        );
+        )
       }
     }
 
-    return null;
+    return null
   }
 }

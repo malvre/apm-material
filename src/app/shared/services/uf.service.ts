@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 
 @Injectable({
   providedIn: 'root',
 })
 export class UFService {
-  constructor() {}
+  constructor() { }
 
   lista() {
     return [
@@ -116,6 +116,6 @@ export class UFService {
         sigla: 'TO',
         nome: 'Tocantins',
       },
-    ];
+    ]
   }
 }
