@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core'
 import { AbstractControl } from '@angular/forms'
-import { FormValidations } from '../../form-validations'
+import { FormValidations } from './form-validations'
 
 @Component({
   selector: 'app-print-error',

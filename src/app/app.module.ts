@@ -14,8 +14,10 @@ import { registerLocaleData } from '@angular/common'
 registerLocaleData(ptBr)
 
 import { NgxMaskModule, IConfig } from 'ngx-mask'
-import { SharedModule } from './shared/shared.module'
-import { MainComponent } from './shared/components/main/main.component'
+
+
+
+import { CoreModule } from './core/core.module'
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -23,14 +25,14 @@ const maskConfig: Partial<IConfig> = {
 }
 
 @NgModule({
-  declarations: [AppComponent, MainComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CoreModule,
     LayoutModule,
-    SharedModule,
     NgxMaskModule.forRoot(),
   ],
   providers: [

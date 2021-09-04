@@ -12,6 +12,7 @@ import { SharedModule } from 'src/app/shared/shared.module'
 import { NgxMaskModule } from 'ngx-mask'
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { FormModalComponent } from './datatable/form-modal/form-modal.component'
+import { HeaderComponent } from './event-emitter/header/header.component'
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormModalComponent } from './datatable/form-modal/form-modal.component'
     DatatableComponent,
     FormularioComponent,
     FormModalComponent,
+    HeaderComponent
   ],
   imports: [SharedModule, ExemplosRoutingModule, NgxMaskModule.forChild()],
 })

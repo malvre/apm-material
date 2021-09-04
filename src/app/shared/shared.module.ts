@@ -23,23 +23,20 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatListModule } from '@angular/material/list'
 import { MatMenuModule } from '@angular/material/menu'
 
-import { ConfirmService } from './services/confirm.service'
+
 
 import { PrintErrorComponent } from './components/print-error/print-error.component'
 import { MatNativeDateModule } from '@angular/material/core'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatChipsModule } from '@angular/material/chips'
 import { MatSliderModule } from '@angular/material/slider'
-import { LoadingComponent } from './components/loading/loading.component'
-import { HeaderComponent } from '../pages/exemplos/event-emitter/header/header.component'
+
 
 @NgModule({
   declarations: [
     ConfirmComponent,
     SearchPipe,
     PrintErrorComponent,
-    LoadingComponent,
-    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -97,9 +94,7 @@ import { HeaderComponent } from '../pages/exemplos/event-emitter/header/header.c
     MatMenuModule,
     MatChipsModule,
     MatSliderModule,
-    LoadingComponent,
-    HeaderComponent,
   ],
-  providers: [ConfirmService],
+  providers: [],
 })
 export class SharedModule { }

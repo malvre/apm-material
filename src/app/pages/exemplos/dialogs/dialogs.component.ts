@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { MatSnackBar } from '@angular/material/snack-bar'
-import { ConfirmService } from 'src/app/shared/services/confirm.service'
+import { ConfirmService } from 'src/app/shared/components/confirm/confirm.service'
+
 
 @Component({
   selector: 'app-dialogs',

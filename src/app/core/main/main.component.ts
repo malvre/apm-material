@@ -4,7 +4,7 @@ import { Observable } from 'rxjs'
 import { map, shareReplay } from 'rxjs/operators'
 import { MatSidenav } from '@angular/material/sidenav'
 import { AuthService } from 'src/app/pages/auth/auth.service'
-import { LoadingService } from '../../services/loading.service'
+import { LoadingService } from '../loading/loading.service'
 
 @Component({
   selector: 'app-main',
