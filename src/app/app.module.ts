@@ -6,17 +6,15 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
-import { LayoutModule } from '@angular/cdk/layout'
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+
 
 import ptBr from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common'
 
 registerLocaleData(ptBr)
 
-import { NgxMaskModule, IConfig } from 'ngx-mask'
-
-
-
+import { LayoutModule } from '@angular/cdk/layout'
 import { CoreModule } from './core/core.module'
 
 const maskConfig: Partial<IConfig> = {
