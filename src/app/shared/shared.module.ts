@@ -22,19 +22,18 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatListModule } from '@angular/material/list'
 import { MatMenuModule } from '@angular/material/menu'
 
-
-
 import { PrintErrorComponent } from './components/print-error/print-error.component'
 import { MatNativeDateModule } from '@angular/material/core'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatChipsModule } from '@angular/material/chips'
 import { MatSliderModule } from '@angular/material/slider'
-
+import { LoadingComponent } from './components/loading/loading.component'
 
 @NgModule({
   declarations: [
     ConfirmComponent,
     PrintErrorComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
@@ -91,6 +90,7 @@ import { MatSliderModule } from '@angular/material/slider'
     MatMenuModule,
     MatChipsModule,
     MatSliderModule,
+    LoadingComponent
   ],
   providers: [],
 })

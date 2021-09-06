@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
 
 import { MainComponent } from './components/main/main.component'
-import { LoadingComponent } from '../shared/components/loading/loading.component'
 import { SharedModule } from '../shared/shared.module'
 
 
@@ -11,7 +10,6 @@ import { SharedModule } from '../shared/shared.module'
 @NgModule({
   declarations: [
     MainComponent,
-    LoadingComponent,
   ],
   imports: [
     CommonModule,
@@ -19,7 +17,7 @@ import { SharedModule } from '../shared/shared.module'
     SharedModule
   ],
   exports: [
-    MainComponent, LoadingComponent
+    MainComponent
   ]
 })
 export class CoreModule { }
