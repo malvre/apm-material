@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { FormControl } from '@angular/forms'
 import { debounceTime, finalize, switchMap, tap } from 'rxjs/operators'
-import { MovieService } from 'src/app/shared/services/movie.service'
+import { MovieService } from 'src/app/core/services/movie.service'
 
 @Component({
   selector: 'app-autocomplete',

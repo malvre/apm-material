@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
 import { MatSnackBar } from '@angular/material/snack-bar'
 
-import { MovieService } from 'src/app/shared/services/movie.service'
+import { MovieService } from 'src/app/core/services/movie.service'
 import { FormModalComponent } from './form-modal/form-modal.component'
 
 @Component({

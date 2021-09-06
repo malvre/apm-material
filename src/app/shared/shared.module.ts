@@ -16,7 +16,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar'
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatDividerModule } from '@angular/material/divider'
 import { ConfirmComponent } from './components/confirm/confirm.component'
-import { SearchPipe } from './pipes/search.pipe'
 import { MatDialogModule } from '@angular/material/dialog'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatSelectModule } from '@angular/material/select'
@@ -35,7 +34,6 @@ import { MatSliderModule } from '@angular/material/slider'
 @NgModule({
   declarations: [
     ConfirmComponent,
-    SearchPipe,
     PrintErrorComponent,
   ],
   imports: [
@@ -68,7 +66,6 @@ import { MatSliderModule } from '@angular/material/slider'
   exports: [
     CommonModule,
     ConfirmComponent,
-    SearchPipe,
     MatIconModule,
     MatSnackBarModule,
     FormsModule,

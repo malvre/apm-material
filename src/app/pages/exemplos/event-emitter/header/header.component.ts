@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
 import { Subscription } from 'rxjs'
-import { MessageService } from 'src/app/shared/services/message.service'
+import { MessageService } from 'src/app/core/services/message.service'
 
 @Component({
   selector: 'app-header',

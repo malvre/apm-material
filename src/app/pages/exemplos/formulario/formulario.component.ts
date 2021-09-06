@@ -5,10 +5,10 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'
-import { LoadingService } from 'src/app/core/loading/loading.service'
+import { LoadingService } from 'src/app/shared/components/loading/loading.service'
 
-import { UFService } from 'src/app/shared/services/uf.service'
-import { ViacepService } from 'src/app/shared/services/viacep.service'
+import { UFService } from 'src/app/core/services/uf.service'
+import { ViacepService } from 'src/app/core/services/viacep.service'
 
 @Component({
   selector: 'app-formulario',

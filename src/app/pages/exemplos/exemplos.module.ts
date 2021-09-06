@@ -13,6 +13,8 @@ import { NgxMaskModule } from 'ngx-mask'
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { FormModalComponent } from './datatable/form-modal/form-modal.component'
 import { HeaderComponent } from './event-emitter/header/header.component'
+import { SearchPipe } from 'src/app/core/pipes/search.pipe'
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { HeaderComponent } from './event-emitter/header/header.component'
     DatatableComponent,
     FormularioComponent,
     FormModalComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchPipe
   ],
   imports: [SharedModule, ExemplosRoutingModule, NgxMaskModule.forChild()],
 })
