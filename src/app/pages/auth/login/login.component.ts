@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { LoadingService } from 'src/app/shared/components/loading/loading.service'
-import { AuthService } from '../../../core/guards/auth.service'
+import { AuthService } from '../../../core/auth/auth.service'
 
 @Component({
   selector: 'app-login',

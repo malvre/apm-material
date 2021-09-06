@@ -3,7 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
 import { Observable } from 'rxjs'
 import { map, shareReplay } from 'rxjs/operators'
 import { MatSidenav } from '@angular/material/sidenav'
-import { AuthService } from 'src/app/core/guards/auth.service'
+import { AuthService } from 'src/app/core/auth/auth.service'
 import { LoadingService } from '../../../shared/components/loading/loading.service'
 
 @Component({
