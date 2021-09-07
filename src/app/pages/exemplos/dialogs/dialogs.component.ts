@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core'
-import { MatSnackBar } from '@angular/material/snack-bar'
-import { ConfirmService } from 'src/app/shared/components/confirm/confirm.service'
-
+import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ConfirmService } from 'src/app/shared/components/confirm/confirm.service';
 
 @Component({
   selector: 'app-dialogs',
@@ -12,9 +11,9 @@ export class DialogsComponent implements OnInit {
   constructor(
     private confirmService: ConfirmService,
     private snackbar: MatSnackBar
-  ) { }
+  ) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   openDialog() {
     this.confirmService
@@ -34,11 +33,11 @@ export class DialogsComponent implements OnInit {
               duration: 5000,
               panelClass: ['success-snackbar'],
             }
-          )
-          console.log('Mísseis enviados')
+          );
+          console.log('Mísseis enviados');
         } else {
-          console.log('aguardando meteoro')
+          console.log('aguardando meteoro');
         }
-      })
+      });
   }
 }
