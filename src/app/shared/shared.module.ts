@@ -28,9 +28,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSliderModule } from '@angular/material/slider';
 import { LoadingComponent } from './components/loading/loading.component';
+import { AutofocusDirective } from './directives/autofocus.directive';
 
 @NgModule({
-  declarations: [ConfirmComponent, PrintErrorComponent, LoadingComponent],
+  declarations: [
+    ConfirmComponent,
+    PrintErrorComponent,
+    LoadingComponent,
+    AutofocusDirective,
+  ],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -87,6 +93,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     MatChipsModule,
     MatSliderModule,
     LoadingComponent,
+    AutofocusDirective,
   ],
   providers: [],
 })

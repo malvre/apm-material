@@ -6,6 +6,7 @@
   <li>Máscaras utilizando o ngx-mask</li>
   <li>Mensagens de validação através de um helper</li>
   <li>Feedback de atividade (loading)</li>
+  <li>Foco automático através de uma diretiva (AppAutoFocus)</li>
 </ul>
 
 <div class="row">
@@ -14,7 +15,7 @@
       <!-- nome -->
       <mat-form-field appearance="fill">
         <mat-label>Nome completo</mat-label>
-        <input matInput formControlName="nome" />
+        <input matInput formControlName="nome" appAutoFocus />
       </mat-form-field>
       <app-print-error [control]="f.nome" label="Nome"></app-print-error>
 
