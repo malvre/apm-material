@@ -47,8 +47,17 @@ $my-primary: mat-palette($md-azul, 500);
 $my-accent: mat-palette($mat-blue, 600);
 $my-warn: mat-palette($mat-red, 500);
 
+$my-dark-primary: mat-palette($mat-pink, 500);
+$my-dark-accent: mat-palette($mat-pink, 200);
+$my-dark-warn: mat-palette($mat-red, A400);
+
 // DEFINIÇÃO DO TEMA
 $my-theme: mat-light-theme($my-primary, $my-accent, $my-warn);
+$my-dark-theme: mat-dark-theme(
+  $my-dark-primary,
+  $my-dark-accent,
+  $my-dark-warn
+);
 
 // APLICAÇÃO DO TEMA
 @include angular-material-theme($my-theme);
