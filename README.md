@@ -45,3 +45,7 @@ Criamos um serviço para facilitar a criação de diálogos de confirmação, j�
 ## Feedback de atividade
 
 Um serviço para facilitar a exibição de um feedback de atividade que bloqueia a tela até o término da atividade.
+
+## Multi componentes
+
+Na página de multi componentes, mostramos como diminuir a complexidade através da componentização de funcionalidades, utilizando comunicação para dentro e para fora dos componentes (Input, Output e Event Emitter). A página fica responsável apenas pela orquestração.
