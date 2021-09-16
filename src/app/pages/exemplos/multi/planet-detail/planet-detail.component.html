@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-title>Detalhe</mat-card-title>
+
+  <img *ngIf="data" mat-card-image [src]="data.image" [alt]="data.planet" />
+  <mat-card-content>
+    <p *ngIf="data">{{ data.planet }}</p>
+    <h3 *ngIf="!data">Selecione um planeta</h3>
+  </mat-card-content>
+</mat-card>

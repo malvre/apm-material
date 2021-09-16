@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>Tabela</mat-card-title>
+  <mat-card-content>
+    <table *ngIf="data.length > 0" class="table table-hover">
+      <thead>
+        <tr>
+          <th>Planeta</th>
+          <th class="text-end">Luas</th>
+          <th class="text-end">Diâmetro</th>
+          <th class="text-end">Distância do sol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let planet of data"
+          (click)="selectPlanet(planet)"
+          [style.font-weight]="
+            selectedPlanet && planet.planet === selectedPlanet.planet
+              ? 'bold'
+              : ''
+          "
+        >
+          <td>{{ planet.planet }}</td>
+          <td class="text-end">{{ planet.moons }}</td>
+          <td class="text-end">{{ planet.diameter }}</td>
+          <td class="text-end">{{ planet.distanceFromSun }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+</mat-card>

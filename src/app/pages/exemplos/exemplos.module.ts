@@ -15,6 +15,9 @@ import { FormModalComponent } from './datatable/form-modal/form-modal.component'
 import { HeaderComponent } from './event-emitter/header/header.component';
 import { SearchPipe } from 'src/app/core/pipes/search.pipe';
 import { MultiComponent } from './multi/multi.component';
+import { PlanetChartComponent } from './multi/planet-chart/planet-chart.component';
+import { PlanetListComponent } from './multi/planet-list/planet-list.component';
+import { PlanetDetailComponent } from './multi/planet-detail/planet-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { MultiComponent } from './multi/multi.component';
     HeaderComponent,
     SearchPipe,
     MultiComponent,
+    PlanetChartComponent,
+    PlanetListComponent,
+    PlanetDetailComponent,
   ],
   imports: [SharedModule, ExemplosRoutingModule, NgxMaskModule.forChild()],
 })

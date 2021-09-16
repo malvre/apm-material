@@ -73,11 +73,20 @@ export class MultiComponent implements OnInit {
       diameter: 2370,
       distanceFromSun: 5906.4,
       image:
-        'https://en.wikipedia.org/wiki/Pluto#/media/File:Pluto_in_True_Color_-_High-Res.jpg',
+        'https://www.nasa.gov/sites/default/files/thumbnails/image/tn-p_lorri_fullframe_color.jpg',
     },
   ];
+
+  selectedPlanet: any;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  selectPlanet(data: any) {
+    this.selectedPlanet = {
+      planet: data.planet,
+      image: data.image,
+    };
+  }
 }
