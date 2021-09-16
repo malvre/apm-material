@@ -1,6 +1,17 @@
 <mat-card>
   <mat-card-title>Gráfico</mat-card-title>
-  <mat-card-content>
-    <p>Gráfico aqui dentro</p>
+  <mat-card-content style="height: 250px">
+    <ngx-charts-bar-horizontal
+      [results]="dataChart"
+      [gradient]="false"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      xAxisLabel="Diâmetro"
+      yAxisLabel="Planetas"
+    >
+    </ngx-charts-bar-horizontal>
   </mat-card-content>
 </mat-card>

@@ -18,6 +18,7 @@ import { MultiComponent } from './multi/multi.component';
 import { PlanetChartComponent } from './multi/planet-chart/planet-chart.component';
 import { PlanetListComponent } from './multi/planet-list/planet-list.component';
 import { PlanetDetailComponent } from './multi/planet-detail/planet-detail.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,11 @@ import { PlanetDetailComponent } from './multi/planet-detail/planet-detail.compo
     PlanetListComponent,
     PlanetDetailComponent,
   ],
-  imports: [SharedModule, ExemplosRoutingModule, NgxMaskModule.forChild()],
+  imports: [
+    SharedModule,
+    ExemplosRoutingModule,
+    NgxMaskModule.forChild(),
+    NgxChartsModule,
+  ],
 })
 export class ExemplosModule {}

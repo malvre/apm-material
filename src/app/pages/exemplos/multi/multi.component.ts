@@ -42,7 +42,7 @@ export class MultiComponent implements OnInit {
       diameter: 142984,
       distanceFromSun: 778.6,
       image:
-        'https://www.cool2bkids.com/wp-content/uploads/2014/05/Jupiter-Picture.jpg',
+        'https://exoplanets.nasa.gov/system/news_items/main_images/1360_maxresdefault_copy.jpg',
     },
     {
       planet: 'Saturn',
@@ -68,7 +68,7 @@ export class MultiComponent implements OnInit {
         'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/1200px-Neptune_Full.jpg',
     },
     {
-      planet: 'Pluto(Dwarf-Planet)',
+      planet: 'Pluto',
       moons: 5,
       diameter: 2370,
       distanceFromSun: 5906.4,
