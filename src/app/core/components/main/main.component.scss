@@ -17,12 +17,13 @@ mat-sidenav-container {
 
   mat-sidenav {
     width: 250px;
+    background-color: mat-color($my-primary, 50);
 
     mat-nav-list {
       a {
         display: flex;
         align-items: center;
-        color: #555;
+        color: mat-color($my-primary, 400);
         font-size: 14px;
 
         mat-icon {
@@ -38,5 +39,5 @@ mat-sidenav-container {
 }
 
 .active-list-item {
-  color: mat-color($my-primary, 500) !important;
+  color: mat-color($my-primary, 700) !important;
 }
