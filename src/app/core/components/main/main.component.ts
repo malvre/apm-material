@@ -14,7 +14,6 @@ import { LoadingService } from '../../../shared/components/loading/loading.servi
 export class MainComponent {
   @ViewChild('drawer', { static: false }) drawer!: MatSidenav;
   isLoading: boolean = false;
-  isDarkTheme: boolean = false;
 
   menuData = [
     {
@@ -71,9 +70,7 @@ export class MainComponent {
     });
   }
 
-  ngOnInit() {
-    this.isDarkTheme = localStorage.getItem('theme') === 'Dark';
-  }
+  ngOnInit() {}
 
   closeDrawer() {
     this.isHandset$.subscribe((isVisible) => {
@@ -85,10 +82,5 @@ export class MainComponent {
 
   onLogout() {
     this.authService.logout();
-  }
-
-  toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    localStorage.setItem('theme', this.isDarkTheme ? 'Dark' : 'Light');
   }
 }
