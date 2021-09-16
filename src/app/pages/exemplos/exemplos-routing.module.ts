@@ -9,7 +9,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { MultiComponent } from './multi/multi.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'multi', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'dialogs', component: DialogsComponent },
   { path: 'autocomplete', component: AutocompleteComponent },

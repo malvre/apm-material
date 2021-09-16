@@ -3,14 +3,14 @@
 <app-planet-chart [data]="planets"></app-planet-chart>
 
 <div class="row mt-4">
-  <div class="col-7">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-8 mb-4">
     <app-planet-list
       [data]="planets"
       (onSelect)="selectPlanet($event)"
     ></app-planet-list>
   </div>
 
-  <div class="col-5">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-4">
     <app-planet-detail [data]="selectedPlanet"></app-planet-detail>
   </div>
 </div>
