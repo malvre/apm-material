@@ -1,10 +1,10 @@
-import { Component, ViewChild } from '@angular/core'
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
-import { Observable } from 'rxjs'
-import { map, shareReplay } from 'rxjs/operators'
-import { MatSidenav } from '@angular/material/sidenav'
-import { AuthService } from 'src/app/core/auth/auth.service'
-import { LoadingService } from '../../../shared/components/loading/loading.service'
+import { Component, ViewChild } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+import { MatSidenav } from '@angular/material/sidenav';
+import { AuthService } from 'src/app/core/auth/auth.service';
+import { LoadingService } from '../../../shared/components/loading/loading.service';
 
 @Component({
   selector: 'app-main',
@@ -12,8 +12,9 @@ import { LoadingService } from '../../../shared/components/loading/loading.servi
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent {
-  @ViewChild('drawer', { static: false }) drawer!: MatSidenav
+  @ViewChild('drawer', { static: false }) drawer!: MatSidenav;
   isLoading: boolean = false;
+  isDarkTheme: boolean = false;
 
   menuData = [
     {
@@ -49,8 +50,8 @@ export class MainComponent {
     {
       title: 'Multi componentes',
       link: '/exemplos/multi',
-      icon: 'view_quilt'
-    }
+      icon: 'view_quilt',
+    },
   ];
 
   isHandset$: Observable<boolean> = this.breakpointObserver
@@ -66,19 +67,28 @@ export class MainComponent {
     public loadingService: LoadingService
   ) {
     this.loadingService.loading.subscribe(() => {
-      this.isLoading = this.loadingService.isLoading
-    })
+      this.isLoading = this.loadingService.isLoading;
+    });
+  }
+
+  ngOnInit() {
+    this.isDarkTheme = localStorage.getItem('theme') === 'Dark';
   }
 
   closeDrawer() {
     this.isHandset$.subscribe((isVisible) => {
       if (isVisible) {
-        this.drawer.close()
+        this.drawer.close();
       }
-    })
+    });
   }
 
   onLogout() {
-    this.authService.logout()
+    this.authService.logout();
+  }
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    localStorage.setItem('theme', this.isDarkTheme ? 'Dark' : 'Light');
   }
 }

@@ -26,6 +26,15 @@
       <mat-icon>account_box</mat-icon>
       <span>Minha conta</span>
     </button>
+    <button mat-menu-item *ngIf="isDarkTheme" (click)="toggleTheme()">
+      <mat-icon>light_mode</mat-icon>
+      <span>Tema claro</span>
+    </button>
+    <button mat-menu-item *ngIf="!isDarkTheme" (click)="toggleTheme()">
+      <mat-icon>dark_mode</mat-icon>
+      <span>Tema escuro</span>
+    </button>
+
     <button mat-menu-item (click)="onLogout()">
       <mat-icon>logout</mat-icon>
       <span>Sair</span>
@@ -33,7 +42,7 @@
   </mat-menu>
 </mat-toolbar>
 
-<mat-sidenav-container>
+<mat-sidenav-container [ngClass]="{ 'dark-theme-mode': isDarkTheme }">
   <mat-sidenav
     *ngIf="authService.isAuthenticated"
     #drawer
