@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormModalComponent } from './datatable/form-modal/form-modal.component';
 import { HeaderComponent } from './event-emitter/header/header.component';
 import { SearchPipe } from 'src/app/core/pipes/search.pipe';
+import { MultiComponent } from './multi/multi.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SearchPipe } from 'src/app/core/pipes/search.pipe';
     FormModalComponent,
     HeaderComponent,
     SearchPipe,
+    MultiComponent,
   ],
   imports: [SharedModule, ExemplosRoutingModule, NgxMaskModule.forChild()],
 })

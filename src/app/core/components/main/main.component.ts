@@ -46,6 +46,11 @@ export class MainComponent {
       link: '/exemplos/formulario',
       icon: 'edit',
     },
+    {
+      title: 'Multi componentes',
+      link: '/exemplos/multi',
+      icon: 'view_quilt'
+    }
   ];
 
   isHandset$: Observable<boolean> = this.breakpointObserver

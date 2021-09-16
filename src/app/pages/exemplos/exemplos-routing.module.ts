@@ -6,6 +6,7 @@ import { DatatableComponent } from './datatable/datatable.component'
 import { DialogsComponent } from './dialogs/dialogs.component'
 import { EventEmitterComponent } from './event-emitter/event-emitter.component'
 import { FormularioComponent } from './formulario/formulario.component'
+import { MultiComponent } from './multi/multi.component'
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'event-emitter', component: EventEmitterComponent },
   { path: 'datatable', component: DatatableComponent },
   { path: 'formulario', component: FormularioComponent },
+  { path: 'multi', component: MultiComponent },
 ]
 
 @NgModule({
