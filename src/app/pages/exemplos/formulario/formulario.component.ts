@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+
 import {
   AbstractControl,
   FormBuilder,
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { LoadingService } from 'src/app/shared/components/loading/loading.service';
 
+import { LoadingService } from 'src/app/shared/components/loading/loading.service';
 import { UFService } from 'src/app/core/services/uf.service';
 import { ViacepService } from 'src/app/core/services/viacep.service';
 

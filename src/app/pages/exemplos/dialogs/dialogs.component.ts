@@ -22,7 +22,7 @@ export class DialogsComponent implements OnInit {
         message:
           'Deseja realmente enviar os mísseis para Brasília e acabar com todos os políticos?',
         confirmCaption: 'É claro!',
-        cancelCaption: 'Deixa pra lá, vou aguardar o meteoro',
+        cancelCaption: 'Vou aguardar o meteoro',
       })
       .subscribe((result) => {
         if (result) {

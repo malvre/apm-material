@@ -56,7 +56,8 @@
           <!-- telefone -->
           <mat-form-field appearance="fill">
             <mat-label>Telefone</mat-label>
-            <input matInput formControlName="telefone" />
+            <span matPrefix>+55 &nbsp;</span>
+            <input matInput formControlName="telefone" mask="00 000000009" />
           </mat-form-field>
           <app-print-error
             [control]="f.telefone"
