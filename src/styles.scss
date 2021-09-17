@@ -56,6 +56,9 @@ body {
           padding-right: 16px;
         }
       }
+      &:hover {
+        background-color: rgba(16, 0, 247, 0.05);
+      }
     }
   }
 }
