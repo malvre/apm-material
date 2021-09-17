@@ -1,0 +1,16 @@
+.table {
+  tr {
+    td {
+      button {
+        visibility: hidden;
+      }
+    }
+    &:hover {
+      td {
+        button {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
