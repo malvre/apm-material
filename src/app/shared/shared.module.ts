@@ -21,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { PrintErrorComponent } from './components/print-error/print-error.component';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -63,6 +64,7 @@ import { AutofocusDirective } from './directives/autofocus.directive';
     MatMenuModule,
     MatChipsModule,
     MatSliderModule,
+    MatDatepickerModule,
   ],
   exports: [
     CommonModule,
@@ -90,6 +92,8 @@ import { AutofocusDirective } from './directives/autofocus.directive';
     MatMenuModule,
     MatChipsModule,
     MatSliderModule,
+    MatDatepickerModule,
+
     LoadingComponent,
     ConfirmComponent,
     PrintErrorComponent,
