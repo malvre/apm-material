@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http'
-import { Injectable } from '@angular/core'
-import { Observable } from 'rxjs'
-import { delay } from 'rxjs/operators'
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -9,11 +9,11 @@ import { delay } from 'rxjs/operators'
 export class MovieService {
   myKey: string = '1bd0b632';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  findAll(term: string): Observable<any> {
+  findAll(term: string = ''): Observable<any> {
     return this.http
       .get(`https://www.omdbapi.com/?apikey=${this.myKey}&s=${term}`)
-      .pipe(delay(1000))
+      .pipe(delay(1000));
   }
 }
