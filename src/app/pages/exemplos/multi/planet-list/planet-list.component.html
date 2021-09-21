@@ -6,8 +6,11 @@
         <tr>
           <th>Planeta</th>
           <th class="text-end">Luas</th>
-          <th class="text-end">Diâmetro</th>
-          <th class="text-end">Distância do sol</th>
+          <th class="text-end">Diâmetro (KM)</th>
+          <th class="text-end">
+            Distância do sol<br />
+            (milhões de KM)
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -23,7 +26,7 @@
           <td>{{ planet.planet }}</td>
           <td class="text-end">{{ planet.moons }}</td>
           <td class="text-end">{{ planet.diameter }}</td>
-          <td class="text-end">{{ planet.distanceFromSun }}</td>
+          <td class="text-end">{{ planet.distanceFromSun | number }}</td>
         </tr>
       </tbody>
     </table>
