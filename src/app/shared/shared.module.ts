@@ -24,6 +24,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { PrintErrorComponent } from './components/print-error/print-error.component';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -69,6 +70,7 @@ import { AutofocusDirective } from './directives/autofocus.directive';
     MatDatepickerModule,
     MatSlideToggleModule,
     MatPaginatorModule,
+    MatGridListModule,
   ],
   exports: [
     CommonModule,
@@ -99,6 +101,7 @@ import { AutofocusDirective } from './directives/autofocus.directive';
     MatDatepickerModule,
     MatSlideToggleModule,
     MatPaginatorModule,
+    MatGridListModule,
 
     LoadingComponent,
     ConfirmComponent,

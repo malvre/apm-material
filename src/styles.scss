@@ -40,6 +40,7 @@ p {
         font-weight: 500;
         border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
         height: 48px;
+        vertical-align: middle;
 
         &:first-child {
           padding-left: 16px;
@@ -54,7 +55,6 @@ p {
 
   tbody {
     tr {
-      height: 48px;
       vertical-align: middle;
 
       td {
