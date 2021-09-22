@@ -4,6 +4,7 @@
   <span style="flex: 1 1 auto"></span>
 
   <mat-icon
+    [@shake]="shakeState"
     [matBadge]="qtdMessagesBadge"
     [matBadgeHidden]="qtdMessagesBadge == 0"
     matBadgeColor="accent"
