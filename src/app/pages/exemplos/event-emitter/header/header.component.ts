@@ -1,7 +1,6 @@
 import {
   animate,
   keyframes,
-  state,
   style,
   transition,
   trigger,
@@ -16,20 +15,8 @@ import { MessageService } from 'src/app/core/services/message.service';
   styleUrls: ['./header.component.scss'],
   animations: [
     trigger('shake', [
-      state(
-        'shake-start',
-        style({
-          transform: 'scale(1)',
-        })
-      ),
-      state(
-        'shake-end',
-        style({
-          transform: 'scale(1)',
-        })
-      ),
       transition(
-        'shake-start => shake-end',
+        '* => *',
         animate(
           '400ms ease-in',
           keyframes([
@@ -50,10 +37,8 @@ import { MessageService } from 'src/app/core/services/message.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   qtdMessagesBadge: number;
-
   messages$: Subscription;
-
-  shakeState: string = 'shake-start';
+  shakeState: string = 'start';
 
   constructor(private messageService: MessageService) {
     this.qtdMessagesBadge = 0;
@@ -62,11 +47,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
       (val) => {
         this.qtdMessagesBadge = val;
 
+        // mudança de estado para fazer a animação
         if (this.qtdMessagesBadge > 0) {
-          this.shakeState = 'shake-end';
-          setTimeout(() => {
-            this.shakeState = 'shake-start';
-          }, 400);
+          this.shakeState = this.shakeState === 'start' ? 'end' : 'start';
         }
       }
     );
