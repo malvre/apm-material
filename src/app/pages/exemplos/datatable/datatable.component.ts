@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { IMovie } from 'src/app/core/models/movie';
 
 import { MovieService } from 'src/app/core/services/movie.service';
 import { FormModalComponent } from './form-modal/form-modal.component';
+
+interface IMovieWithSelection extends IMovie {
+  checked?: boolean;
+}
 
 @Component({
   selector: 'app-datatable',
@@ -11,7 +16,7 @@ import { FormModalComponent } from './form-modal/form-modal.component';
   styleUrls: ['./datatable.component.scss'],
 })
 export class DatatableComponent implements OnInit {
-  movies: any[] = [];
+  movies: IMovieWithSelection[] = [];
   selectAll: boolean = false;
   searchTerm: string = '';
 
@@ -65,7 +70,7 @@ export class DatatableComponent implements OnInit {
   /***
    * abre modal com componente e recebe dados de volta
    */
-  edit(movie: any) {
+  edit(movie: IMovie) {
     const dialogRef = this.dialog.open(FormModalComponent, {
       width: '500px',
       data: movie,
