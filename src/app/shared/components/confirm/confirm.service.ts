@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core'
-import { MatDialog } from '@angular/material/dialog'
-import { Observable } from 'rxjs'
-import { ConfirmComponent } from './confirm.component'
-import { ConfirmDialogData } from './confirm-dialog-data'
+import { Injectable } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
+import { ConfirmComponent } from './confirm.component';
+import { ConfirmDialogData } from './confirm-dialog-data';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ConfirmService {
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {}
 
   confirmDialog(data: ConfirmDialogData): Observable<boolean> {
     return this.dialog
@@ -17,6 +17,6 @@ export class ConfirmService {
         width: '400px',
         disableClose: true,
       })
-      .afterClosed()
+      .afterClosed();
   }
 }

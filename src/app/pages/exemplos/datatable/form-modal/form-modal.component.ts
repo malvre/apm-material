@@ -1,5 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core'
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog'
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-form-modal',
@@ -11,12 +11,12 @@ export class FormModalComponent implements OnInit {
     public dialogRef: MatDialogRef<FormModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
-    console.log(data)
+    console.log(data);
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   onFechar(): void {
-    this.dialogRef.close()
+    this.dialogRef.close();
   }
 }

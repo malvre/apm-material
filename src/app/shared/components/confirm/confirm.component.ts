@@ -1,6 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core'
-import { ConfirmDialogData } from './confirm-dialog-data'
-import { MAT_DIALOG_DATA } from '@angular/material/dialog'
+import { Component, Inject, OnInit } from '@angular/core';
+import { ConfirmDialogData } from './confirm-dialog-data';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-confirm',
@@ -8,7 +8,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog'
   styleUrls: ['./confirm.component.scss'],
 })
 export class ConfirmComponent implements OnInit {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: ConfirmDialogData) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: ConfirmDialogData) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }
