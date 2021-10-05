@@ -1,7 +1,7 @@
 import { NgModule, LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ registerLocaleData(ptBr);
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { CoreModule } from './core/core.module';
+import { AuthInterceptor } from './core/auth/auth.interceptor';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -40,6 +41,11 @@ const maskConfig: Partial<IConfig> = {
     {
       provide: DEFAULT_CURRENCY_CODE,
       useValue: 'BRL',
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
     },
   ],
   bootstrap: [AppComponent],

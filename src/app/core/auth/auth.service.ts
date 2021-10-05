@@ -33,4 +33,9 @@ export class AuthService {
   get isAuthenticated() {
     return this.authenticationState.value;
   }
+
+  get token() {
+    const token = localStorage.getItem(TOKEN_KEY);
+    return token;
+  }
 }
