@@ -19,12 +19,14 @@ export class DatatableComponent implements OnInit {
   movies: IMovieWithSelection[] = [];
   selectAll: boolean = false;
   searchTerm: string = '';
+  
 
   constructor(
     private movieService: MovieService,
     private snackbar: MatSnackBar,
     public dialog: MatDialog
   ) {}
+  
 
   ngOnInit(): void {
     this.loadData();
