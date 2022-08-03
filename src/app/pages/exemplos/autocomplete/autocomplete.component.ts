@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { debounceTime, finalize, switchMap, tap } from 'rxjs/operators';
 import { MovieService } from 'src/app/core/services/movie.service';
 
@@ -9,7 +9,7 @@ import { MovieService } from 'src/app/core/services/movie.service';
   styleUrls: ['./autocomplete.component.scss'],
 })
 export class AutocompleteComponent implements OnInit {
-  searchMoviesCtrl = new FormControl();
+  searchMoviesCtrl = new UntypedFormControl();
   idMovie: string = '';
   filteredMovies: any;
   isLoading: boolean = false;
