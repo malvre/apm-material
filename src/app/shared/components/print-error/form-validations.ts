@@ -1,4 +1,8 @@
-import { UntypedFormArray, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import {
+  UntypedFormArray,
+  UntypedFormControl,
+  UntypedFormGroup,
+} from '@angular/forms';
 
 export class FormValidations {
   static requiredMinCheckbox(min = 1) {
