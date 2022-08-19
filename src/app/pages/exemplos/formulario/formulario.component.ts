@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import {
   AbstractControl,
-  UntypedFormBuilder,
-  UntypedFormGroup,
+  FormBuilder,
+  FormControl,
+  FormGroup,
   Validators,
 } from '@angular/forms';
 
@@ -17,11 +18,11 @@ import { ViacepService } from 'src/app/core/services/viacep.service';
   styleUrls: ['./formulario.component.scss'],
 })
 export class FormularioComponent implements OnInit {
-  form!: UntypedFormGroup;
+  form!: FormGroup;
   estados: any[] = [];
 
   constructor(
-    private fb: UntypedFormBuilder,
+    private fb: FormBuilder,
     private ufService: UFService,
     private viacep: ViacepService,
     private loadingService: LoadingService

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 
 import ptBr from '@angular/common/locales/pt';
+
 import { registerLocaleData } from '@angular/common';
 
 registerLocaleData(ptBr);
